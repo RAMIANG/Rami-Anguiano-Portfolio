@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+    <title>Rami's Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+</head>
+
+<body>
+        <!-------Mobile nav------->
+        <div class="mobile-nav-bar mobile-nav-vshop">
+            <div class="navigation">
+                <ul>
+                    <li class="list active">
+
+                        <a href="./index.html?active=0">
+                            <span id="0" onclick="setActiveState('0')" class="icon">
+                                <i class="fa-solid fa-house"></i>
+                            </span>
+                            <span class="text">
+                                Home
+                            </span>
+                        </a>
+                    </li>
+                    <li class="list">
+
+                        <a href="./PORTFOLIO.html?active=1">
+                            <span id="1" onclick="setActiveState('1')" class="icon">
+                                <i class="fa-solid fa-business-time"></i>
+                            </span>
+                            <span class="text">
+                                Portfolio
+                            </span>
+                        </a>
+                    </li>
+
+                    <li class="list">
+
+                        <a href="./ABOUTME.html?active=2">
+                            <span id="2" onclick="setActiveState('2')" class="icon">
+                                <i class="fa-solid fa-user"></i>
+                            </span>
+                            <span class="text">
+                                About
+                            </span>
+                        </a>
+                    </li>
+                    <li class="list">
+                        <a href="Anguiano,%20Rami%20RESUME.pdf">
+                            <span id="3" onclick="setActiveState('3')" class="icon">
+                                <i class="fa-solid fa-medal"></i>
+                            </span>
+                            <span class="text">
+                                Resume
+                            </span>
+                        </a>
+                    </li>
+                    <li class="list ">
+
+                        <a href="#contact">
+                            <span id="4" onclick="setActiveState('4')" class="icon">
+                                <i class="fa-solid fa-address-card"></i>
+                            </span>
+                            <span class="text">
+                                Contact
+                            </span>
+                        </a>
+                    </li>
+
+                    <div class="indicator"></div>
+                </ul>
+
+            </div>
+        </div>
+
+    <div id="header" class="v-shop-header">
+        <div class="container v-shop-header-wrapper">
+            <nav>
+                <a href="index.html"><img src="Black%20And%20White%20Rakia%20Design%20Studio%20Logo.png"
+                        class="logo"></a>
+                <ul>
+                    <li><a href="index.html">HOME</a></li>
+                    <li><a href="PORTFOLIO.html">PORTFOLIO</a></li>
+                    <li><a href="ABOUTME.html">ABOUT</a></li>
+                    <li><a href="Anguiano,%20Rami%20RESUME.pdf">RESUME</a></li>
+                </ul>
+                <!------Email & LinkedIn------->
+                <div class="nav-contact">
+                    <a href="https://www.linkedin.com/in/rami-anguiano-a2724b190/"><i class="fa-brands fa-linkedin-in icon" style="color: #ffffff;"></i></a>
+                    <a href="mailto: patriciang050@gmail.com"><i class="fa-regular fa-envelope icon" style="color: #ffffff;"></i></a>
+                </div>
+            </nav>
+        </div>
+    </div>
+    <div class="GROUPME HEADER.png">
+
+    </div> <br><br> <br><br>
+
+    <!---idk man------>
+    <main>
+        <div class="wrapper vshop-wrapper">
+        <h1>Not Here quite yet... </h1><br>
+           <center><img src="SQUAREWIP.png"/></center><br>
+    
+            <h1></h1><br>
+        
+            <!--------FOOTER------>
+
+        </div>
+
+        </div>
+    </main>
+
+    <footer>
+        <div id="contact">
+            <div class="container">
+
+                <div class="contact-left">
+                    <h1 class="sub-title">Let's Connect</h1>
+                    <p class="email"><i class="fa-solid fa-envelope" style="color: #ff9cee;"></i>patriciang050@gmail.com
+                    </p>
+                    <a href="Anguiano,%20Rami%20RESUME.pdf" download class="btn btn2">Download CV</a>
+                </div>
+                <div class="contact-right">
+                    <h1>get in touch with me</h1>
+                    <div class="social-icons">
+                        <a href=""><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // common.js
+
+        function setActiveLink(activeIndex) {
+            const list = document.querySelectorAll('.list');
+            list.forEach((item) => item.classList.remove('active'));
+            list[activeIndex].classList.add('active');
+        }
+
+        document.addEventListener('DOMContentLoaded', function () {
+            const urlParams = new URLSearchParams(window.location.search);
+            const activeIndex = parseInt(urlParams.get('active')) || 0;
+            setActiveLink(activeIndex);
+        });
+
+    </script>
+
+
+</body>
